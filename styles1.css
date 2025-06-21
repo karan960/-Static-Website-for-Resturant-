@@ -1,0 +1,144 @@
+/* Contact Page Styles */
+.contact-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contact-info h2, .reservation-form h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #e67e22;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.5s ease;
+}
+
+.form-group:nth-child(1) { transition-delay: 0.1s; }
+.form-group:nth-child(2) { transition-delay: 0.2s; }
+.form-group:nth-child(3) { transition-delay: 0.3s; }
+.form-row .form-group:nth-child(1) { transition-delay: 0.4s; }
+.form-row .form-group:nth-child(2) { transition-delay: 0.5s; }
+.form-row .form-group:nth-child(3) { transition-delay: 0.6s; }
+.form-group:last-child { transition-delay: 0.7s; }
+
+.reservation-form.loaded .form-group {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.submit-btn {
+    background: #e67e22;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: #d35400;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-page {
+  background-color: #111; /* dark elegant */
+  color: #f0f0f0;
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+p{
+    color: #ddd;
+}
+label{
+
+    color: aliceblue;
+}
+
+
+.form-wrapper {
+  background-color: #111;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(224, 189, 123, 0.4);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  align-items: center;
+}
+
+h1 {
+  color: rgb(205, 197, 182);
+  margin-bottom: 30px;
+  padding-left: 200px;
+  text-align: center;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+input[type="date"], input[type="time"] {
+  background-color: white;
+  color: black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  
+}

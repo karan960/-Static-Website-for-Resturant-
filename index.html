@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum Quisine - Fine Dining</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles1.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo" style="color: aliceblue;">Quantum Quisine</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 style="color: aliceblue;">Experience Culinary Excellence</h1>
+      <button class="cta-button" >
+        <a href="Make Reservations.html">Make a Reservation</a>
+      </button>
+    </section>
+
+    <section class="featured-menu">
+      <h1 style="color: aliceblue;" alig>Our Menu</h1>
+      <div class="filter-buttons">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="starters">Starters</button>
+    <button class="filter-btn" data-category="main">Main Courses</button>
+    <button class="filter-btn" data-category="desserts">Desserts</button>
+    <button class="filter-btn" data-category="drinks">Drinks</button>
+  </div>
+
+  <div class="menu-items">
+  <div class="menu-item starters show">
+    <img src="items/spring 1.jpeg" alt="Spring Rolls" style="width:100%; border-radius:10px;">
+    <h3 style="color: aliceblue;">Spring Rolls</h3>
+  </div>
+
+  <div class="menu-item starters show">
+    <img src="items/soup 2.jpeg" alt="Soup" style="width:100%; border-radius:10px;">
+    <h3 style="color: aliceblue;">Hot Soup</h3>
+  </div>
+        
+  <div class="menu-item starters show">
+    <img src="items/starter hyderabadi chicken.webp" alt="starter hyderabadi chicken" style="width:100%; border-radius:10px;">
+    <h3 style="color: aliceblue;">starter hyderabadi chicken</h3>
+  </div>
+
+  <div class="menu-item main show">
+    <img src="items/grilled chicken.jpeg" alt="Grilled Chicken" style="width:100%; border-radius:10px;">
+    <h3 style="color: aliceblue;">Grilled Chicken</h3>
+  </div>
+
+  <div class="menu-item desserts show">
+    <img src="items/ice.jpeg" alt="Ice Cream" style="width:100%; border-radius:10px;">
+    <h3 style="color: aliceblue;">Ice Cream</h3>
+  </div>
+
+  <div class="menu-item drinks show">
+    <img src="items/apple juice 1.jpeg" alt="Apple juice" style="width:100%; border-radius:10px;">
+    <h3 style="color: aliceblue;">Apple juice</h3>
+  </div>
+
+  
+</div>
+      <script>
+    const buttons = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.menu-item');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const category = button.getAttribute('data-category');
+
+        items.forEach(item => {
+          item.classList.remove('show');
+          if (category === 'all' || item.classList.contains(category)) {
+            item.classList.add('show');
+          }
+        });
+      });
+    });
+  </script>
+
+    </section>
+
+    <section id="about">
+      <h2>About Quantum Quisine</h2>
+      <p>
+        At Quantum Quisine, we blend modern innovation with classic flavors to deliver a dining experience like no other. Our chefs craft every dish with passion, precision, and purpose. Step in and explore the next level of cuisine.
+      </p>
+      <a href="about us.html">Learn more</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <h4 style="color: aliceblue;">Quantum Quisine</h4>
+        <p style="color: aliceblue;">Elevating taste through innovation. Experience fine dining with a futuristic twist.</p>
+      </div>
+      <div class="footer-contact">
+        <h5 style="color: aliceblue;">Contact Us</h5>
+        <p style="color: aliceblue;">Email: info@quantumquisine.com</p>
+        <p style="color: aliceblue;">Phone: +91-98765-43210</p>
+        <p style="color: aliceblue;">Location: 88 Fusion Street, Culinary City, India</p>
+      </div>
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about us.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p style="color: aliceblue;">&copy; 2025 KARAN SATHE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="animations.js"></script>
+</body>
+</html>
